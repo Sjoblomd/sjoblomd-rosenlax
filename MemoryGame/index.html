@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="images/x-icon" href="../Images/LogoNoBk.png">
+    <title>Memory Game - RPS Casino</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="row spacebetween">
+            <button class="hamburger-menu" id="hamburger-menu">☰</button>
+            <nav class="nav" id="nav">
+                <ul class="nav-list" id="nav-list"></ul>
+            </nav>
+            <h1>RPS Casino</h1>
+            <img class="row-item  logo" src="../Images/LogoNoBk.png" alt="">
+        </div>
+        <!-- Time Display and Casino Status -->
+        <div class="row spacebetween">
+            <div>
+                <div id="time-display" class="time-display"></div>
+                <div id="casino-status" class="casino-status"></div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="deposit">Deposit money</label>
+                    <input type="number" id="deposit">
+                    <button type="button" onclick="moneyDeposit()">Deposit</button>
+                    <p id="account-balance">Account Balance: 0 €</p>
+                </div>
+                <div class="game-timer">
+                    <label for="play-time">Set play time limit</label>
+                    <select id="play-time">
+                        <option value="5">5 min</option>
+                        <option value="15">15 min</option>
+                        <option value="30">30 min</option>
+                        <option value="60">1 h</option>
+                        <option value="120">2 h</option>
+                    </select>
+                    <button onclick="startTimer()">Start Session</button>
+                    <p id="play-count">You have played 0 times</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="timer-info"></div>
+        </div>
+        <div class="row">
+            <div id="timer"></div>
+        </div>
+        <!-- gömda "admin" knappar (ctrl + B)-->
+        <div id="admin-controls" style="display: none;">
+            <button id="force-open-button">Force Casino Open</button>
+            <button id="force-close-button">Force Casino Closed</button>
+            <button id="reset-override-button">Reset Override</button>
+        </div>
+
+        <div class="memory-game"></div>
+        <div class="row">
+            <button type="button" id="play-again">Play Again</button>
+        </div>
+        <footer>
+            <a href="../responsible gaming/respgame.html">Responsible gaming</a>
+            <a href="https://www.pikavipit.fi/" target="_blank">Get help</a>
+            <p>Designed by Axel Rosenlew & Daniel Sjöblom</p>
+        </footer>
+
+    </div>
+
+    <script src="../hamburgerMenu.js"></script>
+    <script src="../playtime.js"></script>
+    <script src="../deposit.js"></script>
+    <script src="../closed.js"></script>
+    <script src="../MemoryGame/memoryGame.js"></script>
+    <script src="../theme-mixer.js"></script>
+</body>
+
+</html>

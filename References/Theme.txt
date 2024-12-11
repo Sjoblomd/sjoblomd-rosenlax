@@ -1,0 +1,20 @@
+Color Palete
+Gold (#D4AF37) - Use this for highlights, borders, or calls to action, adding a luxurious touch.
+Red (#E44B4B) - Use this for accents like buttons or important notices, bringing in the boldness seen in the dice and spade.
+Black (#1E1E1E) - A dominant background color, similar to the logo's background.
+White (#FFFFFF) - For text or contrast against darker backgrounds.
+Grey (#A8A8A8) - Can be used for secondary text or background elements.
+Light Blue (#6FB4E8) - For a softer highlight or accent, particularly on less emphasized elements.
+Grey #303030
+
+Fonts
+font-family: 'Lobster', cursive; - Good for footer text.
+
+Themes can be made with two of these badboys
+
+/* variables.css */
+:root {
+  --main-color: #3498db;
+  --secondary-color: #ff5733;
+  /* other variables */
+}

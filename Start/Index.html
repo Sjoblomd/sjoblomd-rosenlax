@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="images/x-icon" href="../Images/LogoNoBk.png">
+    <title>RPS Casiono</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="row spacebetween">
+            <button class="hamburger-menu" id="hamburger-menu">☰</button>
+            <nav class="nav" id="nav">
+                <ul class="nav-list" id="nav-list"></ul>
+            </nav>
+            
+            <h1>RPS Casino</h1>
+            <img class="row-item  logo" src="../Images/LogoNoBk.png" alt="">
+
+        </div>
+
+        <!-- Time Display and Casino Status -->
+        <div class="row spacebetween">
+            <div>
+                <div id="time-display" class="time-display"></div>
+                <div id="casino-status" class="casino-status"></div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="play-time">Set play time limit</label>
+                    <select id="play-time">
+                        <option value="5">5 min</option>
+                        <option value="15">15 min</option>
+                        <option value="30">30 min</option>
+                        <option value="60">1 h</option>
+                        <option value="120">2 h</option>
+                    </select>
+                    <button type="button" onclick="">Confirm</button>
+                </div>
+                <div>
+                    <label for="deposit">Deposit money</label>
+                    <input type="number" id="deposit">
+                    <button type="button" onclick="moneyDeposit()">Deposit</button>
+                    <p id="account-balance">Account Balance: 0 €</p>
+                </div>
+            </div>
+        </div>
+        <!--Användar registration/signup-->
+        <div class="row">
+            <div id="output" class="row spacebetween">Register to play!</div>
+            <div class="registration">
+                <label for="firstname">First name:</label>
+                <input type="text" id="firstname">
+                <label for="lastname">Last name:</label>
+                <input type="text" id="lastname">
+                <label for="age">Age:</label>
+                <input type="number" id="age">
+                <button type="button" onclick="registerUser()">Register</button>
+            </div>
+        </div>
+        <!-- gömda "admin" knappar (ctrl + B)-->
+        <div id="admin-controls" style="display: none;">
+            <button id="force-open-button">Force Casino Open</button>
+            <button id="force-close-button">Force Casino Closed</button>
+            <button id="reset-override-button">Reset Override</button>
+        </div>
+
+            <!-- Photo + Text/Buttons -->
+            <div class="row">
+                <img class="banner" src="../Images/banner.png">
+            </div>
+            <div class="row">
+            <!-- RPS Game Button -->
+            <a href="../RPSGame/RPS.html" class="simple-button">
+                <img src="../Images/RPS.png" alt="RPS Game" class="button-image">
+            </a>
+
+            <!-- Memory Game Button -->
+            <a href="../MemoryGame/index.html" class="simple-button">
+                <img src="../Images/Pairs_good.png" alt="Memory Game" class="button-image">
+            </a>
+        </div>
+        
+        
+        <!-- tema väljare -->
+        <div id="controls">
+            <h2>Select a Theme</h2>
+            <select id="theme-selector">
+                <option value="default">Default</option>
+                <option value="lightblue">Light Blue</option>
+                <option value="lightgreen">Light Green</option>
+                <option value="lightpink">Light Pink</option>
+            </select>
+        </div>
+
+        <!-- färg mixer -->
+        <div id="color-mixer">
+            <h2>Color Mixer</h2>
+            <label>
+                Red:
+                <input type="range" id="red-slider" class="slider" min="0" max="255">
+            </label>
+            <label>
+                Green:
+                <input type="range" id="green-slider" class="slider" min="0" max="255">
+            </label>
+            <label>
+                Blue:
+                <input type="range" id="blue-slider" class="slider" min="0" max="255">
+                <!--<p class="preview-text">Preview Text Color: <span id="text-preview">Hello World!</span></p>-->
+
+            </label>
+
+        </div>
+        <script src="../hamburgerMenu.js"></script>
+        <script src="../userInformation.js"></script>
+        <script src="../playtime.js"></script>
+        <script src="../deposit.js"></script>
+        <script src="../closed.js"></script>
+        <script src="../theme-mixer.js"></script>
+        <script src="../Start/registration.js"></script>
+        <footer>
+            <a href="../responsible gaming/respgame.html">Responsible gaming</a>
+            <a href="https://www.pikavipit.fi/" target="_blank">Get help</a>
+            <p>Designed by Axel Rosenlew & Daniel Sjöblom</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
